@@ -45,4 +45,6 @@ class ArticlesController < ApplicationController
 
     redirect_to article_path(@article)
   end
+
+  before_filter :requrire_login, except: [:index, :show]
 end
